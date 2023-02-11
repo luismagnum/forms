@@ -36,7 +36,7 @@ const Formulario = ()=>{
              <input
               className='w-full border-2 border-gray-500 rounded-xl p-1 mt-1 bg- transparent'type='text' 
               {...register('email',{ 
-              pattern: /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ })} placeholder='email'/>
+              pattern: /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ })} placeholder='luismagnum1@gmail.com'/>
              {errors.email?.type === 'pattern' && <p>el formato del email es incorrecto</p>}
          </div>
          <div className='flex align-items-center justify-center gap-4 w-46 max-w-screen-sm'>
