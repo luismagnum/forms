@@ -6,6 +6,7 @@ const Formulario = ()=>{
    e.preventDefault();
    emailjs.sendForm('service_224j5hy','template_i4cdhbo',e.target,'V77rTj72eKT_6KpPi')
    .then(response=>console.log(response))
+   alert('Se ha enviado correctamente')
    .catch(errors=>console.log(errors))
   }
   
@@ -20,7 +21,7 @@ const Formulario = ()=>{
          <div className='mt-8'>
              <label className='text-lg font-bold'>Name</label>
              <input className='w-full border-2 border-gray-500 rounded-xl p-2px mt-2px bg-transparent' type="text" name='user-name'
-              {...register('nombre',{ required:true, maxLength:20 })} placeholder='max 20 characters'/>
+              {...register('nombre',{ required:true, maxLength:20 })} placeholder='  max 20 characters'/>
              {errors.nombre?.type === 'required' && <p>the name field is required
               </p>}
              {errors.nombre?.type === 'maxLength' && <p><mark>field must be less than 20  
@@ -30,14 +31,15 @@ const Formulario = ()=>{
           <label className='text-lg font-bold'>Message</label>
            <textarea 
            className='w-full border-2 border-gray-500 rounded-xl p-1 mt-1 bg-transparent resize-none' name='user-message' 
-           id='' placeholder='enter a maximun of 100 characters' maxlength='100' required cols='20' rows='8'> 
+           id='' placeholder='  enter a maximun of 100 characters' maxlength='100' required cols='20' rows='8'> 
            </textarea>
          <div>
              <label className='text-lg font-bold'>email</label>
              <input
               className='w-full border-2 border-gray-500 rounded-xl p-1 mt-1 bg- transparent'type='text' name='user-email'
               {...register('email',{ 
-              pattern: /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ })} placeholder='luismagnum1@gmail.com'/>
+              pattern: /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ })} placeholder=' 
+               luismagnum1@gmail.com'/>
              {errors.email?.type === 'pattern' && <p>the email format is incorrect</p>}
          </div>
          <div className='flex align-items-center justify-center gap-4 w-46 max-w-screen-sm'>
