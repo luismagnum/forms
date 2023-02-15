@@ -6,7 +6,7 @@ const Formulario = ()=>{
    e.preventDefault();
    emailjs.sendForm('service_224j5hy','template_i4cdhbo',e.target,'V77rTj72eKT_6KpPi')
    .then(response=>console.log(response))
-   alert('Se ha enviado correctamente')
+   alert('successfully sent')
    .catch(errors=>console.log(errors))
   }
   
